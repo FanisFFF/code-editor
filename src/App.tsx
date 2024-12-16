@@ -41,7 +41,6 @@ function App() {
       const url = import.meta.env.VITE_RAPID_API_URL + "/" + token;
       const response = await fetch(url, options);
       const result = await response.json();
-      console.log(result);
       const statusId = result.status?.id;
 
       if (statusId === 1 || statusId === 2) {
@@ -82,7 +81,6 @@ function App() {
       const response = await fetch(url, options);
       const result = await response.json();
       const token = result.token;
-      console.log(token);
       await checkStatus(token);
     } catch (error) {
       console.error(error);
