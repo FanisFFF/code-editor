@@ -60,6 +60,7 @@ function App() {
 
   const handleClick = async (): Promise<void> => {
     setIsLoading(true);
+    setOutputDetails(undefined);
     const url =
       import.meta.env.VITE_RAPID_API_URL +
       "?base64_encoded=true&wait=false&fields=*";
